@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey form</title>
+</head>
+<body>
+    <h1 id="title">Movie Night Feedback Survey</h1>
+    <p id="description">Thank you for joining our movie night! We value your feedback and would love to hear your thoughts
+        on the experience.<br>Your answers will help us improve future movie nights
+    </p>
+    <form method="post" action="" id="survey-form">
+        <label for="name" id="name-label">Enter your name:
+            <input type="text" name="name" id="name" required placeholder="i.e Jane Doe">
+        </label>
+        <label for="email" id="email-label">Enter your email: 
+            <input type="email" id="email" name="email" required placeholder="i.e janedoe@doe.com">
+        </label>        
+        <label for="number" id="number-label">Enter your age (optional): 
+            <input type="number" id="number" name="age" min="16" max="80" placeholder="i.e 30">
+        </label>
+        <label for="dropdown">Which Movie did you watch tonight?
+            <select name="movies" id="dropdown">
+                <option value="">(Select one)</option>
+                <option value="1">Movie A</option>
+                <option value="2">Movie B</option>
+                <option value="3">Movie C</option>
+            </select>
+        </label>
+        <legend>How satisfied were you with the movie selection?</legend>
+        <label for="very-dissatisfied">
+            <input type="radio" id="very-dissatisfied" value="very-dissatisfied" name="satisfactory" class="inline"> Very Dissatisfied
+        </label>
+        <label for="dissatisfied">
+            <input type="radio" id="dissatisfied" value="dissatisfied" name="satisfactory" class="inline"> Dissatisfied
+        </label>
+        <label for="neutral">
+            <input type="radio" id="neutral" value="neutral" name="satisfactory" class="inline"> Neutral
+        </label>
+        <label for="satisfied">
+            <input type="radio" id="satisfied" value="satisfied" name="satisfactory" class="inline"> Satisfied
+        </label>
+        <label for="very-satisfied">
+            <input type="radio" id="very-satisfied" value="very-satisfied" name="satisfactory" class="inline"> Very Satisfied
+        </label>
+        <legend>On a scale of 1 (least enjoyable) to 5 (most enjoyable), how did you enjoy the movie?</legend>
+        <label for="1">
+            <input type="radio" id="1" value="1" name="scale" class="inline"> 1
+        </label>
+        <label for="2">
+            <input type="radio" id="2" value="2" name="scale" class="inline"> 2
+        </label>
+        <label for="3">
+            <input type="radio" id="3" value="3" name="scale" class="inline"> 3
+        </label>
+        <label for="4">
+            <input type="radio" id="4" value="4" name="scale" class="inline"> 4
+        </label>
+        <label for="5">
+            <input type="radio" id="5" value="5" name="scale" class="inline"> 5
+        </label>        
+        <legend>What would you like us to see improve? (Check all that apply)</legend>
+        <label for="ambience">
+            <input type="checkbox" id="ambience" value="Ambience" class="inline"> Ambience and Comfort
+          </label>
+          <label for="activities">
+            <input type="checkbox" id="activities" value="activities" class="inline"> Pre-Movie activities
+          </label>
+          <label for="food">
+            <input type="checkbox" id="food" value="food" class="inline"> Food and Drinks
+          </label>
+          <label for="experience">
+            <input type="checkbox" id="experience" value="experience" class="inline"> Overall Experience
+          </label>
+        <label for="feedback">What did you like about the movie night?
+            <textarea name="feedback" id="feedback" rows="5" cols="30" placeholder="Enter your comments here..."></textarea>
+        </label>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
